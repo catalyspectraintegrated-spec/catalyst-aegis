@@ -1,0 +1,11 @@
+streamlit
+yfinance
+pandas
+sqlalchemy
+python-dotenv
+plotly
+xgboost
+scikit-learn
+groq
+requests
+reportlab

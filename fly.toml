@@ -1,0 +1,24 @@
+app = "catalyst-aegis-mellowing-pebble-7821"
+primary_region = "lhr"
+
+[build]
+
+[env]
+  PORT = "8501"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 8501
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+  
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]

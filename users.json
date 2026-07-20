@@ -1,0 +1,19 @@
+{
+  "catalyspectraintegrated@gmail.com": {
+    "user_id": "CA-EB312140",
+    "full_name": "James A. Ogoh",
+    "email": "catalyspectraintegrated@gmail.com",
+    "password_hash": "655b386cf4942fab29fd913f0b39a1915905c43a25dccd3bd7a99410e2eba093",
+    "country": "Nigeria",
+    "accepted_terms": true,
+    "accepted_risk": true,
+    "accepted_liability": true,
+    "signup_date": "2026-07-20T11:23:22.939869",
+    "verified": true,
+    "verification_code": null,
+    "kyc_tier": "tier1",
+    "subscription": "paper",
+    "login_method": "email",
+    "social_accounts": []
+  }
+}

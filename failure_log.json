@@ -1,0 +1,7 @@
+[
+  {
+    "timestamp": "2026-07-19T19:07:16.854030",
+    "failed": "xgboost",
+    "switched_to": "randomforest"
+  }
+]
