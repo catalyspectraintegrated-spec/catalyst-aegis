@@ -1,0 +1,7 @@
+trading_data.db
+trade_log.json
+users.json
+*.log
+__pycache__/
+*.pyc
+.catalyst_aegis_env

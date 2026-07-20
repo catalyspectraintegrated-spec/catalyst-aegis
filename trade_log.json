@@ -8096,12 +8096,888 @@
       "type": "BUY",
       "entry_price": 1.14103,
       "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 16:20",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 76.95,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 15:47",
+      "exit_time": "2026-07-20 16:22",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.558,
+      "exit_price": 162.554,
+      "pnl": -19.99,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 16:23",
+      "symbol": "GBP/USD",
+      "type": "BUY",
+      "entry_price": 1.34181,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 16:14",
+      "exit_time": "2026-07-20 16:44",
+      "symbol": "BTC/USD",
+      "type": "BUY",
+      "entry_price": 64893.14844,
+      "exit_price": 65079.65797,
+      "pnl": 9.33,
+      "exit_reason": "Trailing Stop",
+      "bars_held": 27,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 16:12",
+      "exit_time": "2026-07-20 16:44",
+      "symbol": "ETH/USD",
+      "type": "BUY",
+      "entry_price": 1883.88,
+      "exit_price": 1887.67704,
+      "pnl": 0.46,
+      "exit_reason": "Trailing Stop",
+      "bars_held": 28,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 16:09",
+      "exit_time": "2026-07-20 16:45",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 569.45001,
+      "exit_price": 572.03003,
+      "pnl": 0.21,
+      "exit_reason": "Trailing Stop",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 16:47",
+      "symbol": "BTC/USD",
+      "type": "BUY",
+      "entry_price": 65332.64844,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 16:20",
+      "exit_time": "2026-07-20 16:47",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 76.95,
+      "exit_price": 77.37607,
+      "pnl": 1.07,
+      "exit_reason": "Trailing Stop",
+      "bars_held": 24,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 16:48",
+      "symbol": "EUR/JPY",
+      "type": "BUY",
+      "entry_price": 185.46001,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 16:15",
+      "exit_time": "2026-07-20 16:51",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.17101,
+      "exit_price": 218.12801,
+      "pnl": -215.0,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 16:51",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 77.48,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 16:17",
+      "exit_time": "2026-07-20 16:53",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14103,
+      "exit_price": 1.14142,
+      "pnl": 1.95,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 16:56",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14155,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 16:23",
+      "exit_time": "2026-07-20 17:00",
+      "symbol": "GBP/USD",
+      "type": "BUY",
+      "entry_price": 1.34181,
+      "exit_price": 1.34187,
+      "pnl": 0.27,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:00",
+      "symbol": "AUD/USD",
+      "type": "BUY",
+      "entry_price": 0.70057,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:00",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 573.59998,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:02",
+      "symbol": "GBP/USD",
+      "type": "BUY",
+      "entry_price": 1.3416,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:03",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.532,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:09",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.134,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 16:47",
+      "exit_time": "2026-07-20 17:24",
+      "symbol": "BTC/USD",
+      "type": "BUY",
+      "entry_price": 65332.64844,
+      "exit_price": 65423.55078,
+      "pnl": 4.55,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 16:48",
+      "exit_time": "2026-07-20 17:25",
+      "symbol": "EUR/JPY",
+      "type": "BUY",
+      "entry_price": 185.46001,
+      "exit_price": 185.53999,
+      "pnl": 399.93,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:26",
+      "symbol": "EUR/JPY",
+      "type": "BUY",
+      "entry_price": 185.528,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 16:51",
+      "exit_time": "2026-07-20 17:28",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 77.48,
+      "exit_price": 77.51,
+      "pnl": 0.07,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:29",
+      "symbol": "ETH/USD",
+      "type": "BUY",
+      "entry_price": 1899.04004,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:29",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 77.51,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 16:56",
+      "exit_time": "2026-07-20 17:33",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14155,
+      "exit_price": 1.14181,
+      "pnl": 1.3,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:34",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14181,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:00",
+      "exit_time": "2026-07-20 17:38",
+      "symbol": "AUD/USD",
+      "type": "BUY",
+      "entry_price": 0.70057,
+      "exit_price": 0.70072,
+      "pnl": 0.74,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:00",
+      "exit_time": "2026-07-20 17:38",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 573.59998,
+      "exit_price": 573.0,
+      "pnl": -0.05,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:02",
+      "exit_time": "2026-07-20 17:39",
+      "symbol": "GBP/USD",
+      "type": "BUY",
+      "entry_price": 1.3416,
+      "exit_price": 1.34208,
+      "pnl": 2.43,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:03",
+      "exit_time": "2026-07-20 17:40",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.532,
+      "exit_price": 162.53799,
+      "pnl": 29.98,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:42",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.541,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:43",
+      "symbol": "AUD/USD",
+      "type": "BUY",
+      "entry_price": 0.70057,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:44",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 572.53998,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:47",
+      "symbol": "GBP/USD",
+      "type": "BUY",
+      "entry_price": 1.34162,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:09",
+      "exit_time": "2026-07-20 17:47",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.134,
+      "exit_price": 218.07401,
+      "pnl": -299.99,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:51",
+      "symbol": "BTC/USD",
+      "type": "BUY",
+      "entry_price": 65385.03125,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:53",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.07899,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:26",
+      "exit_time": "2026-07-20 18:04",
+      "symbol": "EUR/JPY",
+      "type": "BUY",
+      "entry_price": 185.528,
+      "exit_price": 185.44901,
+      "pnl": -394.97,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 18:04",
+      "symbol": "EUR/JPY",
+      "type": "BUY",
+      "entry_price": 185.44901,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:29",
+      "exit_time": "2026-07-20 18:06",
+      "symbol": "ETH/USD",
+      "type": "BUY",
+      "entry_price": 1899.04004,
+      "exit_price": 1896.70996,
+      "pnl": -0.28,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:29",
+      "exit_time": "2026-07-20 18:06",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 77.51,
+      "exit_price": 77.55,
+      "pnl": 0.1,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 18:06",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 77.55,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:34",
+      "exit_time": "2026-07-20 18:10",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14181,
+      "exit_price": 1.14168,
+      "pnl": -0.65,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:42",
+      "exit_time": "2026-07-20 18:18",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.541,
+      "exit_price": 162.491,
+      "pnl": -250.02,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 18:19",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.487,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:43",
+      "exit_time": "2026-07-20 18:19",
+      "symbol": "AUD/USD",
+      "type": "BUY",
+      "entry_price": 0.70057,
+      "exit_price": 0.70057,
+      "pnl": 0.0,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 18:19",
+      "symbol": "ETH/USD",
+      "type": "BUY",
+      "entry_price": 1897.68994,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:44",
+      "exit_time": "2026-07-20 18:19",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 572.53998,
+      "exit_price": 572.41998,
+      "pnl": -0.01,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:47",
+      "exit_time": "2026-07-20 18:22",
+      "symbol": "GBP/USD",
+      "type": "BUY",
+      "entry_price": 1.34162,
+      "exit_price": 1.34268,
+      "pnl": 5.31,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 18:22",
+      "symbol": "AUD/USD",
+      "type": "BUY",
+      "entry_price": 0.70072,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 18:24",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 571.79999,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 18:25",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14181,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 17:51",
+      "exit_time": "2026-07-20 18:27",
+      "symbol": "BTC/USD",
+      "type": "BUY",
+      "entry_price": 65385.03125,
+      "exit_price": 65462.41016,
+      "pnl": 3.87,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 17:53",
+      "exit_time": "2026-07-20 18:28",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.07899,
+      "exit_price": 218.14999,
+      "pnl": 355.0,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:01",
+      "symbol": "GBP/USD",
+      "type": "BUY",
+      "entry_price": 1.3436,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:01",
+      "symbol": "BTC/USD",
+      "type": "BUY",
+      "entry_price": 65196.73047,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 18:04",
+      "exit_time": "2026-07-20 20:03",
+      "symbol": "EUR/JPY",
+      "type": "BUY",
+      "entry_price": 185.44901,
+      "exit_price": 185.487,
+      "pnl": 189.97,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 18:06",
+      "exit_time": "2026-07-20 20:05",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 77.55,
+      "exit_price": 77.59,
+      "pnl": 0.1,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:09",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.284,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:10",
+      "symbol": "EUR/JPY",
+      "type": "BUY",
+      "entry_price": 185.487,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 18:19",
+      "exit_time": "2026-07-20 20:19",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.487,
+      "exit_price": 162.492,
+      "pnl": 25.02,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 18:19",
+      "exit_time": "2026-07-20 20:19",
+      "symbol": "ETH/USD",
+      "type": "BUY",
+      "entry_price": 1897.68994,
+      "exit_price": 1893.68005,
+      "pnl": -0.48,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 18:22",
+      "exit_time": "2026-07-20 20:22",
+      "symbol": "AUD/USD",
+      "type": "BUY",
+      "entry_price": 0.70072,
+      "exit_price": 0.70013,
+      "pnl": -2.94,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:22",
+      "symbol": "AUD/USD",
+      "type": "BUY",
+      "entry_price": 0.70013,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:22",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 77.46,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 18:24",
+      "exit_time": "2026-07-20 20:24",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 571.79999,
+      "exit_price": 571.35999,
+      "pnl": -0.04,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 18:25",
+      "exit_time": "2026-07-20 20:25",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14181,
+      "exit_price": 1.14181,
+      "pnl": 0.0,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:28",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.498,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:32",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14207,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:34",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 571.20001,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:01",
+      "exit_time": "2026-07-20 20:37",
+      "symbol": "GBP/USD",
+      "type": "BUY",
+      "entry_price": 1.3436,
+      "exit_price": 1.34387,
+      "pnl": 1.35,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:01",
+      "exit_time": "2026-07-20 20:37",
+      "symbol": "BTC/USD",
+      "type": "BUY",
+      "entry_price": 65196.73047,
+      "exit_price": 65010.55078,
+      "pnl": -9.31,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:09",
+      "exit_time": "2026-07-20 20:44",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.284,
+      "exit_price": 218.349,
+      "pnl": 325.01,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:45",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.326,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:10",
+      "exit_time": "2026-07-20 20:47",
+      "symbol": "EUR/JPY",
+      "type": "BUY",
+      "entry_price": 185.487,
+      "exit_price": 185.493,
+      "pnl": 29.98,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:55",
+      "symbol": "BTC/USD",
+      "type": "BUY",
+      "entry_price": 65125.33984,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:22",
+      "exit_time": "2026-07-20 20:58",
+      "symbol": "AUD/USD",
+      "type": "BUY",
+      "entry_price": 0.70013,
+      "exit_price": 0.70018,
+      "pnl": 0.24,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:58",
+      "symbol": "EUR/JPY",
+      "type": "BUY",
+      "entry_price": 185.49899,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:22",
+      "exit_time": "2026-07-20 20:58",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 77.46,
+      "exit_price": 77.58,
+      "pnl": 0.3,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:59",
+      "symbol": "SOL/USD",
+      "type": "BUY",
+      "entry_price": 77.61,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:28",
+      "exit_time": "2026-07-20 21:03",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.498,
+      "exit_price": 162.489,
+      "pnl": -45.01,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 21:03",
+      "symbol": "USD/JPY",
+      "type": "BUY",
+      "entry_price": 162.489,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 21:07",
+      "symbol": "GBP/USD",
+      "type": "BUY",
+      "entry_price": 1.34333,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:32",
+      "exit_time": "2026-07-20 21:08",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14207,
+      "exit_price": 1.14168,
+      "pnl": -1.96,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 20:34",
+      "exit_time": "2026-07-20 21:10",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 571.20001,
+      "exit_price": 571.34998,
+      "pnl": 0.01,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 21:11",
+      "symbol": "AUD/USD",
+      "type": "BUY",
+      "entry_price": 0.69999,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 21:13",
+      "symbol": "BNB/USD",
+      "type": "BUY",
+      "entry_price": 571.56,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 21:18",
+      "symbol": "EUR/USD",
+      "type": "BUY",
+      "entry_price": 1.14168,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 21:18",
+      "symbol": "ETH/USD",
+      "type": "BUY",
+      "entry_price": 1899.72998,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:45",
+      "exit_time": "2026-07-20 21:21",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.326,
+      "exit_price": 218.24699,
+      "pnl": -395.05,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
+    },
+    {
+      "entry_time": "2026-07-20 21:29",
+      "symbol": "GBP/JPY",
+      "type": "BUY",
+      "entry_price": 218.25301,
+      "status": "open"
+    },
+    {
+      "entry_time": "2026-07-20 20:55",
+      "exit_time": "2026-07-20 21:30",
+      "symbol": "BTC/USD",
+      "type": "BUY",
+      "entry_price": 65125.33984,
+      "exit_price": 65240.35156,
+      "pnl": 5.75,
+      "exit_reason": "Time Exit",
+      "bars_held": 32,
+      "status": "closed"
     }
   ],
   "account_snapshot": {
     "balance": 10000.0,
-    "equity": 6168.43,
-    "free_margin": 6168.43
+    "equity": 5926.98,
+    "free_margin": 5926.98
   },
-  "last_updated": "2026-07-20 16:17:18"
+  "last_updated": "2026-07-20 21:30:29"
 }

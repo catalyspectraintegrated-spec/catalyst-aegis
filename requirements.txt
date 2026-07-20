@@ -9,4 +9,3 @@ scikit-learn
 groq
 requests
 reportlab
-sqlalchemy
