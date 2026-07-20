@@ -1,5 +1,7 @@
 from db_setup import init_database
+from fetch_data import fetch_all
 init_database()
+fetch_all()
 
 import streamlit as st
 import pandas as pd
