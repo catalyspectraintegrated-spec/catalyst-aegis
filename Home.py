@@ -1,3 +1,6 @@
+from db_setup import init_database
+init_database()
+
 import streamlit as st
 import pandas as pd
 from auth_utils import authenticate_social
