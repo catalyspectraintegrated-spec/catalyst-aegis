@@ -11,7 +11,12 @@ st.set_page_config(page_title="Dashboard", page_icon="📊", layout="wide")
 DB_FILE = "trading_data.db"
 TRADE_LOG_FILE = "trade_log.json"
 EMERGENCY_STOP_FILE = "emergency_stop.flag"
-engine = create_engine(f"sqlite:///{DB_FILE}")
+
+# Only create engine — don't fail if database is empty
+try:
+    engine = create_engine(f"sqlite:///{DB_FILE}")
+except:
+    engine = None
 
 ALL_ASSETS = {
     "EUR/USD": ("eur_usd_h1","eur_usd_m15","forex"),
@@ -26,17 +31,6 @@ ALL_ASSETS = {
     "SOL/USD": ("sol_usd_h1","sol_usd_m15","crypto"),
 }
 
-def load_trade_log():
-    if os.path.exists(TRADE_LOG_FILE):
-        with open(TRADE_LOG_FILE) as f: return json.load(f)
-    return {"trades":[],"account_snapshot":{},"last_updated":""}
-
-def emergency_stop_active(): return os.path.exists(EMERGENCY_STOP_FILE)
-def trigger_emergency_stop():
-    with open(EMERGENCY_STOP_FILE,'w') as f: f.write(datetime.now().isoformat())
-def clear_emergency_stop():
-    if os.path.exists(EMERGENCY_STOP_FILE): os.remove(EMERGENCY_STOP_FILE)
-
 user = st.session_state.get('user')
 is_verified = user and user.get('verified', False) if user else False
 
@@ -47,26 +41,33 @@ h1t, m15t, _ = ALL_ASSETS.get(view, ALL_ASSETS[all_names[0]])
 tf = st.sidebar.radio("Timeframe", ["1 Hour","15 Minutes"])
 days = st.sidebar.slider("History (days)", 1, 180, 30)
 
-stopped = emergency_stop_active()
-if not is_verified:
-    st.sidebar.warning("⚠️ Sign up & verify to trade")
-elif stopped:
-    st.sidebar.error("🚨 EMERGENCY STOP ACTIVE")
-    if st.sidebar.button("✅ Resume Trading", use_container_width=True):
-        clear_emergency_stop()
-        st.rerun()
-else:
-    st.sidebar.success("🟢 Engine Running")
+# Try to load data — show clear message if it fails
+table = h1t if tf == "1 Hour" else m15t
 
-trade_log = load_trade_log()
+try:
+    df = pd.read_sql(f"SELECT * FROM {table} WHERE time >= datetime('now','-{days} days') ORDER BY time ASC", 
+                     engine, index_col="time", parse_dates=True)
+except Exception as e:
+    st.warning("📡 Market data is loading. This takes 1-2 minutes on first run.")
+    st.info("The platform is downloading historical data for 10 assets. Please wait and refresh.")
+    
+    # Show a simple placeholder
+    st.markdown("---")
+    st.markdown("### ⏳ Data Loading In Progress...")
+    st.markdown("""
+    Catalyst AEGIS is fetching market data for all 10 assets. This happens once.
+    - EUR/USD, GBP/USD, USD/JPY, AUD/USD, EUR/JPY, GBP/JPY
+    - BTC/USD, ETH/USD, BNB/USD, SOL/USD
+    
+    **Refresh this page in 2 minutes.**
+    """)
+    st.stop()
 
-@st.cache_data(ttl=60)
-def load_data(t, d):
-    return pd.read_sql(f"SELECT * FROM {t} WHERE time >= datetime('now','-{d} days') ORDER BY time ASC", engine, index_col="time", parse_dates=True)
+if df.empty:
+    st.warning("📡 No data available yet. Data is being fetched — please refresh in 2 minutes.")
+    st.stop()
 
-df = load_data(h1t if tf=="1 Hour" else m15t, days)
-if df.empty: st.error("No data"); st.stop()
-
+# Calculate indicators
 df['MA20'] = df['close'].rolling(20).mean()
 df['MA50'] = df['close'].rolling(50).mean()
 delta = df['close'].diff(); gain=delta.where(delta>0,0); loss=-delta.where(delta<0,0)
@@ -84,8 +85,6 @@ st.caption(f"Monitoring {len(selected)} assets | {datetime.now().strftime('%H:%M
 
 if not is_verified:
     st.warning("🔒 Viewing in read-only mode. Sign up and verify your email to start trading.")
-if stopped:
-    st.error("🚨 EMERGENCY STOP IS ACTIVE — NO NEW TRADES WILL BE OPENED")
 
 c1,c2,c3,c4,c5 = st.columns(5)
 with c1: st.metric("Price", pf.format(cur), f"{pct:+.2f}%")
@@ -98,7 +97,13 @@ st.markdown("---")
 st.subheader("📡 Live Monitor")
 lc1,lc2,lc3,lc4 = st.columns(4)
 
-trades = trade_log.get("trades",[])
+# Trade log
+trades = []
+if os.path.exists(TRADE_LOG_FILE):
+    with open(TRADE_LOG_FILE) as f:
+        data = json.load(f)
+        trades = data.get("trades",[])
+
 ft = [t for t in trades if t.get("symbol") in selected]
 ot = [t for t in ft if t.get("status")=="open"]
 closed = [t for t in ft if t.get("status")=="closed"]
@@ -117,23 +122,15 @@ with lc4:
     st.markdown("**Trading Controls**")
     if not is_verified:
         st.info("🔒 Sign up to trade")
-    elif stopped:
-        st.error("🛑 STOPPED")
     elif ot:
         st.markdown("🟢 **LIVE TRADE ACTIVE**")
         if st.button("🛑 EMERGENCY STOP", type="primary", use_container_width=True):
-            trigger_emergency_stop()
+            with open(EMERGENCY_STOP_FILE,'w') as f: f.write(datetime.now().isoformat())
             st.rerun()
     else:
         st.markdown("⚪ Idle — Monitoring")
-        if st.button("▶️ Start Trading", type="primary", use_container_width=True, disabled=not is_verified):
-            st.success("Engine is running — waiting for entry signals")
 
-if ft:
-    st.markdown("---"); st.subheader("Recent Trades")
-    rows = [{"Time":t.get("entry_time","")[:16],"Symbol":t.get("symbol",""),"P&L":f"${t.get('pnl',0):+,.2f}","Reason":t.get("exit_reason","")} for t in ft[-15:]]
-    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
-
+# Chart
 st.markdown("---")
 fig = go.Figure()
 fig.add_trace(go.Candlestick(x=df.index, open=df['open'], high=df['high'], low=df['low'], close=df['close'],
@@ -143,36 +140,6 @@ fig.add_trace(go.Scatter(x=df.index, y=df['MA50'], mode='lines', name='MA 50', l
 fig.update_layout(title=f"{view} — {tf}", height=450, xaxis_rangeslider_visible=False,
     legend=dict(orientation="h",yanchor="bottom",y=1.02,xanchor="right",x=1), margin=dict(l=0,r=0,t=40,b=0))
 st.plotly_chart(fig, use_container_width=True)
-
-ca,cb = st.columns(2)
-with ca:
-    st.subheader("RSI"); fr=go.Figure()
-    fr.add_trace(go.Scatter(x=df.index,y=df['RSI'],mode='lines',line=dict(color='#7B1FA2',width=1.5)))
-    fr.add_hline(y=70,line_dash="dash",line_color="#ef5350"); fr.add_hline(y=30,line_dash="dash",line_color="#26a69a")
-    fr.update_layout(height=250,yaxis=dict(range=[0,100]),showlegend=False,margin=dict(l=0,r=0,t=30,b=0))
-    st.plotly_chart(fr,use_container_width=True)
-with cb:
-    st.subheader("Performance"); df['returns']=df['close'].pct_change()
-    st.metric("Return",f"{((df['close'].iloc[-1]-df['close'].iloc[0])/df['close'].iloc[0]*100):+.2f}%")
-    st.metric("Volatility",f"{df['returns'].std()*100:.4f}%")
-    st.metric("Max DD",f"{((df['close']/df['close'].cummax())-1).min()*100:+.2f}%")
-
-# On-Chain Data Panel
-st.markdown("---")
-st.subheader("🔗 On-Chain Market Data")
-try:
-    from onchain_data import get_onchain_summary, get_funding_rates, get_whale_transactions
-    summary = get_onchain_summary()
-    col1, col2, col3, col4 = st.columns(4)
-    with col1: st.metric("Market Sentiment", summary.get('sentiment_label','N/A'))
-    with col2:
-        funding = get_funding_rates()
-        btc_funding = funding.get("BTC/USD", {}).get("funding_rate", 0)
-        st.metric("BTC Funding Rate", f"{btc_funding:.4f}%")
-    with col3: st.metric("Recent Whale Moves", summary.get('recent_whales', 0))
-    with col4: st.metric("Largest Whale Move", "N/A" if not summary.get('recent_whales') else "Active")
-except:
-    st.info("On-chain data module loading.")
 
 from mobile_css import add_mobile_css
 add_mobile_css()

@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from auth_utils import authenticate_social
 from db_setup import init_database
-from fetch_data import fetch_all
+
 import random
 
 st.set_page_config(page_title="CATALYST AEGIS", page_icon="🛡️", layout="wide")
